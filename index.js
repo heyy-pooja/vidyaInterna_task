@@ -18,8 +18,8 @@ app.use(cors({
 app.use("/api/user", require("./routes/user.routes"));
 
 app.use("*", (req, res) => {
-    res.status(404).json({ message: "Resource Not Found" });
-    // res.sendFile(path.join(__dirname, "dist", "index.html"))
+    // res.status(404).json({ message: "Resource Not Found" });
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
 });
 
 app.use((err, req, res, next) => {
